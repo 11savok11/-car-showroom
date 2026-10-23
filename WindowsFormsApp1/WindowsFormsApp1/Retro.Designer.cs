@@ -109,11 +109,12 @@
             this.button1.TabIndex = 11;
             this.button1.Text = "Вернутся в каталог";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources._78e9c8ad2b9fe2f28a3e4ce83e7db517;
+            this.pictureBox2.Image = global::WindowsFormsApp1.Properties.Resources.car3;
             this.pictureBox2.Location = new System.Drawing.Point(309, 262);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox2.Name = "pictureBox2";
@@ -125,7 +126,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources._78e9c8ad2b9fe2f28a3e4ce83e7db517;
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.car3;
             this.pictureBox1.Location = new System.Drawing.Point(309, 468);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
@@ -137,7 +138,7 @@
             // pictureBox5
             // 
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox5.Image = global::WindowsFormsApp1.Properties.Resources._78e9c8ad2b9fe2f28a3e4ce83e7db517;
+            this.pictureBox5.Image = global::WindowsFormsApp1.Properties.Resources.car3;
             this.pictureBox5.Location = new System.Drawing.Point(666, 468);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox5.Name = "pictureBox5";

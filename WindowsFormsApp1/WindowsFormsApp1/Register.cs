@@ -25,49 +25,11 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string username = tbUserName.Text.Trim();
-            string password = tbPassword.Text;
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
-            {
-                MessageBox.Show("Пожалуйста, заполните все поля.");
-                return;
-            }
-            if (password != tbPassReload.Text)
-            {
-                MessageBox.Show("Пароли не совпадают. Пожалуйста, попробуйте снова.");
-                return;
-            }
+        }
 
-            if (!IsValidPassword(password))
-            {
-                MessageBox.Show("Пароль содержит недопустимые символы. Используйте только буквы и цифры.");
-                return;
-            }
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
 
-            DataRow[] duplicateUsers = БДДАТАСЕТ.Аккаунты.Select($"Username = '{username.Replace("'", "''")}'");
-            if (duplicateUsers.Length > 0)
-            {
-                MessageBox.Show("Пользователь с таким логином уже существует! Придумайте другой.");
-                return;
-            }
-
-            try
-            {
-                DataRow nRow = БДДАТАСЕТ.Аккаунты.NewRow();
-
-                nRow["Username"] = username;
-                nRow["PasswordText"] = password;
-
-                БДДАТАСЕТ.Аккаунты.Rows.Add(nRow);
-                бдTableAdapter.Update(БДДАТАСЕТ.Аккаунты);
-
-                MessageBox.Show("Регистрация Успешна!");
-                Close();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Ошибка при сохранении в базу данных");
-            }
         }
     }
 }
